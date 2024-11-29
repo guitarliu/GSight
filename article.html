@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="article-title">文章标题</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <style>
+        body {
+            font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #fafafa;
+        }
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        .article-content h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+        .article-content h2 {
+            font-size: 1.8rem;
+            font-weight: semibold;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            color: #444;
+        }
+        .article-content p {
+            margin-bottom: 1rem;
+        }
+        .article-content ul, .article-content ol {
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="article-content bg-white shadow-md rounded-lg">
+        <div id="article-content">
+            <!-- 文章内容将被动态插入 -->
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        // 从 URL 获取文章路径
+        function getArticlePath() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('path');
+        }
+
+        // 获取并渲染 Markdown 文件
+        async function renderArticle() {
+            const articlePath = getArticlePath();
+            if (!articlePath) {
+                document.getElementById('article-content').innerHTML = '未找到文章';
+                return;
+            }
+
+            try {
+                const response = await fetch(articlePath);
+                const markdownText = await response.text();
+                
+                // 使用 marked 库将 Markdown 转换为 HTML
+                const htmlContent = marked.parse(markdownText);
+                document.getElementById('article-content').innerHTML = htmlContent;
+                
+                // 设置页面标题
+                const titleMatch = markdownText.match(/^# (.+)$/m);
+                if (titleMatch) {
+                    document.title = titleMatch[1];
+                }
+            } catch (error) {
+                document.getElementById('article-content').innerHTML = '文章加载失败';
+            }
+        }
+
+        // 页面加载时渲染文章
+        document.addEventListener('DOMContentLoaded', renderArticle);
+    </script>
+</body>
+</html>

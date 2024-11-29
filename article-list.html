@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>GlowInsight | 文章列表</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
+            background-color: #fafafa;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #FF6B9E, #8A4FFF);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+    <div class="container mx-auto px-6 py-12">
+        <div class="flex justify-between items-center mb-10">
+            <h1 class="text-3xl font-bold gradient-text">文章列表</h1>
+            <a href="index.html" class="text-pink-500 hover:text-pink-700">返回首页</a>
+        </div>
+        
+        <div id="article-categories" class="mb-10">
+            <div class="flex justify-center space-x-4">
+                <button class="category-btn px-4 py-2 bg-pink-500 text-white rounded active" data-category="all">全部文章</button>
+                <button class="category-btn px-4 py-2 bg-gray-200 text-gray-700 rounded" data-category="skincare-science">护肤科学</button>
+                <button class="category-btn px-4 py-2 bg-gray-200 text-gray-700 rounded" data-category="beauty-trends">美容趋势</button>
+                <button class="category-btn px-4 py-2 bg-gray-200 text-gray-700 rounded" data-category="practical-guides">实用指南</button>
+            </div>
+        </div>
+
+        <div id="articles-container" class="grid md:grid-cols-3 gap-8">
+            <!-- 文章将被动态渲染 -->
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('/articles-data.json')
+                .then(response => response.json())
+                .then(articleData => {
+                    renderArticles(articleData); // 传入获取的文章数据
+                    setupCategoryFilters(articleData); // 同样传入文章数据
+                })
+                .catch(error => console.error('文章数据加载失败:', error));
+        });
+        
+        function renderArticles(articleData, category = 'all') {
+            // 原有的渲染逻辑保持不变
+            const articlesContainer = document.getElementById('articles-container');
+            let articlesToRender = [];
+        
+            if (category === 'all') {
+                articlesToRender = Object.values(articleData).flat();
+            } else {
+                articlesToRender = articleData[category];
+            }
+        
+            articlesContainer.innerHTML = articlesToRender.map(article => `
+            <article class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition">
+                <img src="${article.image}" alt="文章配图" class="w-full rounded-lg mb-4">
+                <h3 class="text-xl font-semibold mb-3">${article.title}</h3>
+                <p class="text-gray-600 mb-4">${article.description}</p>
+                <a href="/article.html?path=${encodeURIComponent(article.path)}" 
+                   class="text-pink-500 font-medium hover:text-pink-700" target="_blank">
+                    阅读全文 →
+                </a>
+            </article>
+            `).join('');
+        }
+        
+        function setupCategoryFilters(articleData) {
+            // 同样传入文章数据并保持原有逻辑
+            const categoryButtons = document.querySelectorAll('.category-btn');
+            
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // 移除所有按钮的active状态
+                    categoryButtons.forEach(btn => {
+                        btn.classList.remove('bg-pink-500', 'text-white');
+                        btn.classList.add('bg-gray-200', 'text-gray-700');
+                    });
+
+                    // 给当前按钮添加active状态
+                    this.classList.remove('bg-gray-200', 'text-gray-700');
+                    this.classList.add('bg-pink-500', 'text-white');
+                    // 渲染对应分类文章
+                    renderArticles(articleData, this.dataset.category);
+                });
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderArticles(); // 默认渲染所有文章
+            setupCategoryFilters(); // 设置分类筛选
+        });
+    </script>
+</body>
+</html>

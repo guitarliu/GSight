@@ -1,0 +1,152 @@
+{
+    "skincare-science": [
+        {
+            "title": "皮肤构造和护理原理解析",
+            "description": "全面介绍皮肤的结构、功能以及基础护理原理，帮助了解护肤背后的科学。",
+            "path": "/posts/skincare-science/skin-structure-and-care-principles.md",
+            "category": "skincare-science",
+            "image": "/api/placeholder/400/250"
+        },
+        {
+            "title": "常见护肤成分的作用机制和使用方法",
+            "description": "解析护肤品中常见成分的工作原理，以及如何正确使用这些成分以达到最佳效果。",
+            "path": "/posts/skincare-science/common-skincare-ingredients-and-how-to-use.md",
+            "category": "skincare-science",
+            "image": "/api/placeholder/400/250"
+        },
+        {
+            "title": "不同肤质的护理重点和注意事项",
+            "description": "根据不同肤质（油性、干性、敏感性等），提供定制化的护理方案和注意事项。",
+            "path": "/posts/skincare-science/skincare-tips-for-different-skin-types.md",
+            "category": "skincare-science",
+            "image": "/api/placeholder/400/250"
+        },
+        {
+            "title": "季节性护肤建议和产品选择指南",
+            "description": "根据不同季节的气候变化，提供相应的护肤建议和适合的护肤产品推荐。",
+            "path": "/posts/skincare-science/seasonal-skincare-tips-and-product-selection.md",
+            "category": "skincare-science",
+            "image": "/api/placeholder/400/250"
+        }
+    ],
+    "beauty-trends": [
+        {
+            "title": "当下流行的护肤方法和技巧",
+            "description": "追踪当前最流行的护肤方法和技巧，帮助你提升护肤效果并保持最佳状态。",
+            "path": "/posts/beauty-trends/current-skincare-trends-and-tips.md",
+            "category": "beauty-trends",
+            "image": "/api/placeholder/400/250"
+        },
+        {
+            "title": "新品成分解析和使用建议",
+            "description": "解析新兴护肤成分的效果与使用方法，帮助你了解哪些成分值得关注。",
+            "path": "/posts/beauty-trends/new-ingredient-analysis-and-usage-tips.md",
+            "category": "beauty-trends",
+            "image": "/api/placeholder/400/250"
+        },
+        {
+            "title": "国内外美容潮流分析",
+            "description": "分析国内外最新的美容潮流，带你了解全球护肤趋势的变化。",
+            "path": "/posts/beauty-trends/domestic-and-international-beauty-trends.md",
+            "category": "beauty-trends",
+            "image": "/api/placeholder/400/250"
+        },
+        {
+            "title": "明星网红护肤方法解析",
+            "description": "揭秘明星和网红的护肤秘密，探索她们的护肤技巧和产品推荐。",
+            "path": "/posts/beauty-trends/celebrity-and-influencer-skincare-routines.md",
+            "category": "beauty-trends",
+            "image": "/api/placeholder/400/250"
+        }
+    ],
+    "practical-guides": [
+        {
+            "title": "日常基础护肤步骤详解",
+            "description": "详细介绍每日护肤的基础步骤，帮助你构建有效的护肤程序，保持肌肤健康。",
+            "path": "/posts/practical-guides/daily-skincare-routine.md",
+            "category": "practical-guides",
+            "image": "/api/placeholder/400/250"
+        },
+        {
+            "title": "常见肌肤问题(如痘痘、敏感)的解决方案",
+            "description": "提供针对常见肌肤问题（如痘痘、敏感等）的科学解决方案，帮助改善肌肤状况。",
+            "path": "/posts/practical-guides/common-skin-issues-solutions.md",
+            "category": "practical-guides",
+            "image": "/api/placeholder/400/250"
+        },
+        {
+            "title": "美容仪器的使用技巧和注意事项",
+            "description": "介绍常见美容仪器的使用技巧及注意事项，帮助你正确使用仪器提升护肤效果。",
+            "path": "/posts/practical-guides/beauty-devices-tips-and-precautions.md",
+            "category": "practical-guides",
+            "image": "/api/placeholder/400/250"
+        },
+        {
+            "title": "居家美容小技巧分享",
+            "description": "分享一些简单有效的居家美容技巧，让你在家也能拥有专业护肤效果。",
+            "path": "/posts/practical-guides/home-beauty-tips.md",
+            "category": "practical-guides",
+            "image": "/api/placeholder/400/250"
+        }
+    ],
+    "product-reviews": [
+        {
+            "title": "不同价位段产品横向对比",
+            "description": "对比不同价位段的护肤产品，分析其性价比，帮助消费者做出理智选择。",
+            "path": "/posts/product-reviews/product-price-comparison.md",
+            "category": "product-reviews",
+            "image": "/api/placeholder/400/250"
+        },
+        {
+            "title": "同类产品功效对比测评",
+            "description": "对比同类护肤产品的功效，帮助你了解不同品牌的产品在同一类别中的表现。",
+            "path": "/posts/product-reviews/similar-products-performance-comparison.md",
+            "category": "product-reviews",
+            "image": "/api/placeholder/400/250"
+        },
+        {
+            "title": "适合不同肤质的产品推荐",
+            "description": "根据不同肤质（油性、干性、敏感性等）推荐适合的护肤产品，帮助选择最适合自己的产品。",
+            "path": "/posts/product-reviews/skincare-products-for-different-skin-types.md",
+            "category": "product-reviews",
+            "image": "/api/placeholder/400/250"
+        },
+        {
+            "title": "新品开箱和使用体验分享",
+            "description": "分享最新护肤产品的开箱和使用体验，带你深入了解新品的效果和使用感受。",
+            "path": "/posts/product-reviews/product-unboxing-and-review.md",
+            "category": "product-reviews",
+            "image": "/api/placeholder/400/250"
+        }
+    ],
+    "interactive-contents": [
+        {
+            "title": "读者护肤困惑答疑",
+            "description": "解答读者在护肤过程中遇到的各种困惑，提供专业的护肤建议。",
+            "path": "/posts/interactive-contents/skincare-questions-and-answers.md",
+            "category": "interactive-content",
+            "image": "/api/placeholder/400/250"
+        },
+        {
+            "title": "真实使用案例分享",
+            "description": "分享真实用户的护肤故事和使用经验，让你了解不同产品和护肤方法的实际效果。",
+            "path": "/posts/interactive-contents/real-skincare-experience-sharing.md",
+            "category": "interactive-content",
+            "image": "/api/placeholder/400/250"
+        },
+        {
+            "title": "护肤误区纠正",
+            "description": "纠正常见的护肤误区，帮助大家避免护肤过程中的常见错误，提高护肤效果。",
+            "path": "/posts/interactive-contents/skincare-myths-correction.md",
+            "category": "interactive-content",
+            "image": "/api/placeholder/400/250"
+        },
+        {
+            "title": "美容小调查和互动话题",
+            "description": "通过调查和互动话题与读者交流，了解大家的护肤偏好和热门话题。",
+            "path": "/posts/interactive-contents/beauty-surveys-and-interactive-topics.md",
+            "category": "interactive-content",
+            "image": "/api/placeholder/400/250"
+        }
+    ]
+}

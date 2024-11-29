@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>GlowInsight | 智慧护肤生活指南</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <style>
+        body {
+            font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #fafafa;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #FF6B9E, #8A4FFF);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hover-glow:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .bg-white {
+            margin-top: auto;
+        }
+        .section-link {
+            text-decoration: none;
+            cursor: pointer;
+        }
+        /* Mobile menu styles */
+        #mobile-menu {
+            display: none;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .bar {
+            width: 25px;
+            height: 3px;
+            background-color: #333;
+            margin: 3px 0;
+            transition: 0.4s;
+        }
+        @media screen and (max-width: 768px) {
+            .desktop-menu {
+                display: none;
+            }
+            .hamburger {
+                display: flex;
+            }
+            #mobile-menu {
+                display: none;
+                width: 100%;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                background-color: white;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            }
+            #mobile-menu.active {
+                display: block;
+            }
+            #mobile-menu ul {
+                flex-direction: column;
+                align-items: center;
+                padding: 1rem 0;
+            }
+            #mobile-menu ul li {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+    <header class="bg-white shadow-md fixed w-full z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="logo.svg" alt="GlowInsight Logo" class="h-10 w-10 mr-3">
+                <span class="text-2xl font-bold gradient-text">GlowInsight</span>
+            </div>
+            
+            <!-- Desktop Menu -->
+            <ul class="desktop-menu flex space-x-6 font-medium">
+                <li><a href="menu-list.html?category=skincare-science" class="text-pink-500 hover:text-pink-700 transition">护肤科普</a></li>
+                <li><a href="menu-list.html?category=beauty-trends" class="hover:text-pink-500 transition">美容趋势</a></li>
+                <li><a href="menu-list.html?category=practical-guides" class="hover:text-pink-500 transition">护理指南</a></li>
+                <li><a href="menu-list.html?category=product-reviews" class="hover:text-pink-500 transition">产品测评</a></li>
+                <li><a href="menu-list.html?category=interactive-contents" class="hover:text-pink-500 transition">社区互动</a></li>
+            </ul>
+
+            <!-- Mobile Hamburger Menu -->
+            <div class="hamburger" onclick="toggleMobileMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu">
+            <ul class="flex flex-col items-center space-y-4 py-4">
+                <li><a href="menu-list.html?category=skincare-science" class="text-pink-500 hover:text-pink-700 transition">护肤科普</a></li>
+                <li><a href="menu-list.html?category=beauty-trends" class="hover:text-pink-500 transition">美容趋势</a></li>
+                <li><a href="menu-list.html?category=practical-guides" class="hover:text-pink-500 transition">护理指南</a></li>
+                <li><a href="menu-list.html?category=product-reviews" class="hover:text-pink-500 transition">产品测评</a></li>
+                <li><a href="menu-list.html?category=interactive-contents" class="hover:text-pink-500 transition">社区互动</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 pt-24 pb-12">
+        <section class="mb-16">
+            <h1 class="text-4xl font-bold text-center mb-8 gradient-text">发现你的完美肌肤密码</h1>
+            <div class="grid md:grid-cols-3 gap-8">
+                <a href="find-list.html?category=skincare-science" class="section-link">
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover-glow">
+                        <div class="text-4xl mb-4 text-pink-400">🔬</div>
+                        <h2 class="text-2xl font-semibold mb-4">护肤科学</h2>
+                        <p class="text-gray-600">深入解析皮肤构造、成分原理和精准护理</p>
+                    </div>
+                </a>
+
+                <a href="find-list.html?category=beauty-trends" class="section-link">
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover-glow">
+                        <div class="text-4xl mb-4 text-purple-400">🌈</div>
+                        <h2 class="text-2xl font-semibold mb-4">美容趋势</h2>
+                        <p class="text-gray-600">追踪全球最新护肤技术和美容潮流</p>
+                    </div>
+                </a>
+
+                <a href="find-list.html?category=practical-guides" class="section-link">
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover-glow">
+                        <div class="text-4xl mb-4 text-blue-400">📋</div>
+                        <h2 class="text-2xl font-semibold mb-4">实用指南</h2>
+                        <p class="text-gray-600">提供专业、可操作的护肤实践建议</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-10 gradient-text">最新文章</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <article class="bg-white p-6 rounded-xl shadow-lg hover-glow">
+                    <img src="/api/placeholder/400/250" alt="文章配图" class="w-full rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold mb-3">冬季肌肤救援指南</h3>
+                    <p class="text-gray-600 mb-4">全面解决干燥、敏感、缺水等冬季肌肤难题</p>
+                    <a href="article-list.html" class="text-pink-500 font-medium hover:text-pink-700">阅读更多 →</a>
+                </article>
+                <article class="bg-white p-6 rounded-xl shadow-lg hover-glow">
+                    <img src="/api/placeholder/400/250" alt="文章配图" class="w-full rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold mb-3">新一代精华成分解析</h3>
+                    <p class="text-gray-600 mb-4">揭秘最前沿的护肤科技和突破性成分</p>
+                    <a href="article-list.html" class="text-pink-500 font-medium hover:text-pink-700">阅读更多 →</a>
+                </article>
+                <article class="bg-white p-6 rounded-xl shadow-lg hover-glow">
+                    <img src="/api/placeholder/400/250" alt="文章配图" class="w-full rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold mb-3">敏感肌终极调理</h3>
+                    <p class="text-gray-600 mb-4">专业解读敏感肌肤的修复与呵护秘诀</p>
+                    <a href="article-list.html" class="text-pink-500 font-medium hover:text-pink-700">阅读更多 →</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="bg-gradient-to-r from-pink-500 to-purple-600 text-white p-12 rounded-xl text-center">
+            <h2 class="text-3xl font-bold mb-4">订阅我们的护肤通讯</h2>
+            <p class="mb-6">获取最新护肤资讯、独家测评和专业建议</p>
+            <div class="max-w-md mx-auto flex">
+                <input type="email" placeholder="输入你的邮箱" class="flex-grow px-4 py-3 rounded-l-lg text-gray-800">
+                <button class="bg-white text-pink-500 px-6 py-3 rounded-r-lg font-semibold hover:bg-gray-100">订阅</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-#FAFAFA py-12 border-t">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="text-gray-500 hover:text-pink-500">关于我们</a>
+                <a href="#" class="text-gray-500 hover:text-pink-500">联系方式</a>
+                <a href="#" class="text-gray-500 hover:text-pink-500">隐私政策</a>
+            </div>
+            <p class="text-gray-600">© 2024 GlowInsight. 致力于分享专业、科学的护肤知识</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>GlowInsight | 文章列表</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
+            background-color: #fafafa;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #FF6B9E, #8A4FFF);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+    <div class="container mx-auto px-6 py-12">
+        <div class="flex justify-between items-center mb-10">
+            <h1 class="text-3xl font-bold gradient-text">文章列表</h1>
+            <a href="index.html" class="text-pink-500 hover:text-pink-700">返回首页</a>
+        </div>
+        <div id="articles-container" class="grid md:grid-cols-3 gap-8">
+            <!-- 文章将被动态渲染 -->
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 获取 URL 中的 category 参数
+            const urlParams = new URLSearchParams(window.location.search);
+            const category = urlParams.get('category') || 'all';  // 获取分类参数，默认为 'all'
+
+            fetch('/menu-data.json')
+                .then(response => response.json())
+                .then(articleData => {
+                    renderArticles(articleData, category); // 传入获取的文章数据和当前选中的 category
+                    setupCategoryFilters(articleData); // 同样传入文章数据
+                })
+                .catch(error => console.error('文章数据加载失败:', error));
+        });
+        
+        function renderArticles(articleData, category) {
+            const articlesContainer = document.getElementById('articles-container');
+            let articlesToRender = [];
+
+            if (category === 'all') {
+                // 如果选择全部文章，显示所有类别的文章
+                articlesToRender = Object.values(articleData).flat();
+            } else {
+                // 根据选择的 category 显示对应分类的文章
+                articlesToRender = articleData[category] || [];
+            }
+
+            // 渲染文章的 HTML
+            articlesContainer.innerHTML = articlesToRender.map(article => `
+                <article class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition">
+                    <img src="${article.image}" alt="文章配图" class="w-full rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold mb-3">${article.title}</h3>
+                    <p class="text-gray-600 mb-4">${article.description}</p>
+                    <a href="/article.html?path=${encodeURIComponent(article.path)}" 
+                    class="text-pink-500 font-medium hover:text-pink-700" target="_blank">
+                        阅读全文 →
+                    </a>
+                </article>
+            `).join('');
+        }
+        
+        function setupCategoryFilters(articleData) {
+            const categoryButtons = document.querySelectorAll('.category-btn');
+            
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // 移除所有按钮的 active 状态
+                    categoryButtons.forEach(btn => {
+                        btn.classList.remove('bg-pink-500', 'text-white');
+                        btn.classList.add('bg-gray-200', 'text-gray-700');
+                    });
+
+                    // 给当前按钮添加 active 状态
+                    this.classList.remove('bg-gray-200', 'text-gray-700');
+                    this.classList.add('bg-pink-500', 'text-white');
+
+                    // 渲染对应分类文章，并更新 URL 参数
+                    const selectedCategory = this.dataset.category;
+                    renderArticles(articleData, selectedCategory);
+
+                    // 更新 URL 中的 category 参数
+                    const currentUrl = new URL(window.location);
+                    currentUrl.searchParams.set('category', selectedCategory);
+                    window.history.pushState({}, '', currentUrl);  // 更新浏览器地址栏的 URL
+                });
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderArticles(); // 默认渲染所有文章
+            setupCategoryFilters(); // 设置分类筛选
+        });
+    </script>
+</body>
+</html>

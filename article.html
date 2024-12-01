@@ -14,9 +14,9 @@
             background-color: #fafafa;
         }
         .article-content {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 2rem 1rem;
+            padding: 2rem 2rem;
         }
         .article-content h1 {
             font-size: 2.5rem;
@@ -75,6 +75,12 @@
                 const titleMatch = markdownText.match(/^# (.+)$/m);
                 if (titleMatch) {
                     document.title = titleMatch[1];
+
+                    // 给标题添加样式
+                    const articleTitle = document.querySelector('h1');
+                    if (articleTitle) {
+                        articleTitle.style.color = '#FF69B4';  // 设置标题颜色为粉色
+                    }
                 }
             } catch (error) {
                 document.getElementById('article-content').innerHTML = '文章加载失败';

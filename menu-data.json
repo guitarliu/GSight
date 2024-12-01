@@ -5,28 +5,28 @@
             "description": "全面介绍皮肤的结构、功能以及基础护理原理，帮助了解护肤背后的科学。",
             "path": "/posts/skincare-science/skin-structure-and-care-principles.md",
             "category": "skincare-science",
-            "image": "/api/placeholder/400/250"
+            "image": "images/skin-structure-and-care-principles.webp"
         },
         {
             "title": "常见护肤成分的作用机制和使用方法",
             "description": "解析护肤品中常见成分的工作原理，以及如何正确使用这些成分以达到最佳效果。",
             "path": "/posts/skincare-science/common-skincare-ingredients-and-how-to-use.md",
             "category": "skincare-science",
-            "image": "/api/placeholder/400/250"
+            "image": "images/common-skincare-ingredients-and-how-to-use.webp"
         },
         {
             "title": "不同肤质的护理重点和注意事项",
             "description": "根据不同肤质（油性、干性、敏感性等），提供定制化的护理方案和注意事项。",
             "path": "/posts/skincare-science/skincare-tips-for-different-skin-types.md",
             "category": "skincare-science",
-            "image": "/api/placeholder/400/250"
+            "image": "images/skincare-tips-for-different-skin-types.webp"
         },
         {
             "title": "季节性护肤建议和产品选择指南",
             "description": "根据不同季节的气候变化，提供相应的护肤建议和适合的护肤产品推荐。",
             "path": "/posts/skincare-science/seasonal-skincare-tips-and-product-selection.md",
             "category": "skincare-science",
-            "image": "/api/placeholder/400/250"
+            "image": "images/seasonal-skincare-tips-and-product-selection.webp"
         }
     ],
     "beauty-trends": [
@@ -35,28 +35,28 @@
             "description": "追踪当前最流行的护肤方法和技巧，帮助你提升护肤效果并保持最佳状态。",
             "path": "/posts/beauty-trends/current-skincare-trends-and-tips.md",
             "category": "beauty-trends",
-            "image": "/api/placeholder/400/250"
+            "image": "images/current-skincare-trends-and-tips.webp"
         },
         {
             "title": "新品成分解析和使用建议",
             "description": "解析新兴护肤成分的效果与使用方法，帮助你了解哪些成分值得关注。",
             "path": "/posts/beauty-trends/new-ingredient-analysis-and-usage-tips.md",
             "category": "beauty-trends",
-            "image": "/api/placeholder/400/250"
+            "image": "images/new-ingredient-analysis-and-usage-tips.webp"
         },
         {
             "title": "国内外美容潮流分析",
             "description": "分析国内外最新的美容潮流，带你了解全球护肤趋势的变化。",
             "path": "/posts/beauty-trends/domestic-and-international-beauty-trends.md",
             "category": "beauty-trends",
-            "image": "/api/placeholder/400/250"
+            "image": "images/domestic-and-international-beauty-trends.webp"
         },
         {
             "title": "明星网红护肤方法解析",
             "description": "揭秘明星和网红的护肤秘密，探索她们的护肤技巧和产品推荐。",
             "path": "/posts/beauty-trends/celebrity-and-influencer-skincare-routines.md",
             "category": "beauty-trends",
-            "image": "/api/placeholder/400/250"
+            "image": "images/celebrity-and-influencer-skincare-routines.webp"
         }
     ],
     "practical-guides": [
@@ -65,28 +65,28 @@
             "description": "详细介绍每日护肤的基础步骤，帮助你构建有效的护肤程序，保持肌肤健康。",
             "path": "/posts/practical-guides/daily-skincare-routine.md",
             "category": "practical-guides",
-            "image": "/api/placeholder/400/250"
+            "image": "images/daily-skincare-routine.webp"
         },
         {
             "title": "常见肌肤问题(如痘痘、敏感)的解决方案",
             "description": "提供针对常见肌肤问题（如痘痘、敏感等）的科学解决方案，帮助改善肌肤状况。",
             "path": "/posts/practical-guides/common-skin-issues-solutions.md",
             "category": "practical-guides",
-            "image": "/api/placeholder/400/250"
+            "image": "images/common-skin-issues-solutions.webp"
         },
         {
             "title": "美容仪器的使用技巧和注意事项",
             "description": "介绍常见美容仪器的使用技巧及注意事项，帮助你正确使用仪器提升护肤效果。",
             "path": "/posts/practical-guides/beauty-devices-tips-and-precautions.md",
             "category": "practical-guides",
-            "image": "/api/placeholder/400/250"
+            "image": "images/beauty-devices-tips-and-precautions.webp"
         },
         {
             "title": "居家美容小技巧分享",
             "description": "分享一些简单有效的居家美容技巧，让你在家也能拥有专业护肤效果。",
             "path": "/posts/practical-guides/home-beauty-tips.md",
             "category": "practical-guides",
-            "image": "/api/placeholder/400/250"
+            "image": "images/home-beauty-tips.webp"
         }
     ],
     "product-reviews": [

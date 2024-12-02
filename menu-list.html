@@ -5,6 +5,7 @@
     <title>GlowInsight | 文章列表</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <style>
         body {
             font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
@@ -15,7 +16,12 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
+        #reward-code:hover .reward-icon {
+			background-color: white;
+		}
     </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body class="text-gray-800">
     <div class="container mx-auto px-6 py-12">
@@ -25,6 +31,23 @@
         </div>
         <div id="articles-container" class="grid md:grid-cols-3 gap-8">
             <!-- 文章将被动态渲染 -->
+        </div>
+    </div>
+
+    <div id="page" class="site">
+        <!-- 添加磁吸式公众号二维码 -->
+        <div id="reward-code" style="position: fixed; right: 5px; bottom: 160px; z-index: 9999; cursor: pointer;">
+            <div class="reward-icon" style="width: 50px; height: 50px; background-color: 
+                                            white; border-radius: 20%; display: flex; 
+                                            justify-content: center; align-items: center; 
+                                            font-size: 20px; color: #fff; 
+                                            box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
+                <img class="wechat-icon" src="images/wechat.svg" alt="公众号" style="width: 100%; height: 100%;">                  
+            </div>
+            <img class="wechat-qrcode" src="images/wechat-qrcode.webp" alt="打赏二维码" 
+                 style="display: none; position: absolute; bottom: 60px; right: 0; 
+                        max-width: 200px; width: auto; height: auto; border-radius: 10px; 
+                        box-shadow: 0 0 10px rgba(0,0,0,0.3);">
         </div>
     </div>
 
@@ -42,32 +65,6 @@
                 })
                 .catch(error => console.error('文章数据加载失败:', error));
         });
-        
-        function renderArticles(articleData, category) {
-            const articlesContainer = document.getElementById('articles-container');
-            let articlesToRender = [];
-
-            if (category === 'all') {
-                // 如果选择全部文章，显示所有类别的文章
-                articlesToRender = Object.values(articleData).flat();
-            } else {
-                // 根据选择的 category 显示对应分类的文章
-                articlesToRender = articleData[category] || [];
-            }
-
-            // 渲染文章的 HTML
-            articlesContainer.innerHTML = articlesToRender.map(article => `
-                <article class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition">
-                    <img src="${article.image}" alt="文章配图" class="w-50% h-auto rounded-lg mb-4">
-                    <h2 class="text-xl font-semibold mb-3">${article.title}</h3>
-                    <p class="text-gray-600 mb-4">${article.description}</p>
-                    <a href="/article.html?path=${encodeURIComponent(article.path)}" 
-                    class="text-pink-500 font-medium hover:text-pink-700" target="_blank">
-                        阅读全文 →
-                    </a>
-                </article>
-            `).join('');
-        }
         
         function setupCategoryFilters(articleData) {
             const categoryButtons = document.querySelectorAll('.category-btn');
@@ -96,10 +93,88 @@
             });
         }
 
+        function renderArticles(articleData, category) {
+            const articlesContainer = document.getElementById('articles-container');
+            let articlesToRender = [];
+
+            if (category === 'all') {
+                // 如果选择全部文章，显示所有类别的文章
+                articlesToRender = Object.values(articleData).flat();
+            } else {
+                // 根据选择的 category 显示对应分类的文章
+                articlesToRender = articleData[category] || [];
+            }
+
+            // 渲染文章的 HTML
+            articlesContainer.innerHTML = articlesToRender.map(article => `
+                <article class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition">
+                    <img src="${article.image}" alt="文章配图" class="w-50% h-auto rounded-lg mb-4">
+                    <h2 class="text-xl font-semibold mb-3">${article.title}</h3>
+                    <p class="text-gray-600 mb-4">${article.description}</p>
+                    <a href="/article.html?path=${encodeURIComponent(article.path)}" 
+                    class="text-pink-500 font-medium hover:text-pink-700" target="_blank">
+                        阅读全文 →
+                    </a>
+                </article>
+            `).join('');
+        }
+        
+        
         document.addEventListener('DOMContentLoaded', () => {
             renderArticles(); // 默认渲染所有文章
             setupCategoryFilters(); // 设置分类筛选
         });
+
+
+        jQuery(document).ready(function($) {
+            // 获取公众号图标和二维码
+            var rewardCode = $('#reward-code');
+            var qrCode = rewardCode.find('.wechat-qrcode');
+            var rewardIcon = rewardCode.find('.reward-icon');
+
+            // 鼠标悬停在公众号图标时显示二维码
+            rewardIcon.hover(
+                function() {
+                    qrCode.fadeIn(300);  // 显示二维码，动画持续300ms
+                },
+                function() {
+                    qrCode.fadeOut(300);  // 鼠标移出时隐藏二维码
+                }
+            );
+
+            // 点击公众号图标时显示二维码
+            rewardCode.hover(
+                function() {
+                    qrCode.fadeIn(300);  // 显示二维码，动画持续300ms
+                },
+                function() {
+                    qrCode.fadeOut(300);  // 隐藏二维码，动画持续300ms
+                }
+            );
+        });
+
+		document.addEventListener('keydown', function (event) {
+		if (event.key === "F12" || 
+			(event.ctrlKey && event.shiftKey && (event.key === 'I' 
+												 || event.key === 'C' 
+												 || event.key === 'J')) 
+				|| (event.ctrlKey && event.key === 'U')) {
+				event.preventDefault();
+				alert('你小子别想扒站！');
+				}
+			});
+		document.addEventListener('contextmenu', function(event) {
+		if (event.target.tagName === 'A') {
+			return; 
+		}
+		event.preventDefault();
+		});
+		document.addEventListener('keydown', function (event) {
+		if (event.ctrlKey && event.shiftKey && (event.key === 'I' || event.key === 'C' || event.key === 'J')) {
+			event.preventDefault();
+			alert('你小子别想扒站！');
+			}
+		});
     </script>
 </body>
 </html>

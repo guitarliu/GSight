@@ -29,7 +29,7 @@
             "description": "揭秘最前沿的护肤科技和突破性成分", 
             "path": "/posts/beauty-trends/essence-ingredients.md",
             "category": "beauty-trends", 
-            "image": "/api/placeholder/400/250"
+            "image": "images/essence-ingredients.webp"
         },
         {
             "title": "2024全球美容趋势",

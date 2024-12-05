@@ -45,14 +45,14 @@
             "description": "专业解读敏感肌肤的修复与呵护秘诀",
             "path": "/posts/practical-guides/sensitive-skin-care.md",
             "category": "practical-guides", 
-            "image": "/api/placeholder/400/250"
+            "image": "images/sensitive-skin-care.webp"
         },
         {
             "title": "每日护肤routine指南", 
             "description": "科学制定适合自己的护肤程序",
-            "path": "/posts/practical-guides/daily-skincare-routine.md",
+            "path": "/posts/practical-guides/personalized-skincare-routine-guide.md`",
             "category": "practical-guides",
-            "image": "/api/placeholder/400/250"
+            "image": "images/personalized-skincare-routine-guide.webp"
         }
     ]
 }

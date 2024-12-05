@@ -5,14 +5,14 @@
             "description": "全面解决干燥、敏感、缺水等冬季肌肤难题",
             "path": "/posts/skincare-science/winter-skin-rescue.md",
             "category": "skincare-science",
-            "image": "/api/placeholder/400/250"
+            "image": "images/winter-skin-rescue.webp"
         },
         {
             "title": "夏季防晒全攻略", 
             "description": "深入了解防晒科学，全方位保护肌肤",
             "path": "/posts/skincare-science/summer-sunscreen-guide.md", 
             "category": "skincare-science",
-            "image": "/api/placeholder/400/250"
+            "image": "images/summber-sunscreen-guide.webp"
         }
     ],
     "beauty-trends": [
@@ -21,14 +21,14 @@
             "description": "揭秘最前沿的护肤科技和突破性成分", 
             "path": "/posts/beauty-trends/essence-ingredients.md",
             "category": "beauty-trends", 
-            "image": "/api/placeholder/400/250"
+            "image": "images/essence-ingredients.webp"
         },
         {
             "title": "2024全球美容趋势",
             "description": "解读当下最热门的美容科技和理念",
             "path": "/posts/beauty-trends/global-beauty-trends.md", 
             "category": "beauty-trends",
-            "image": "/api/placeholder/400/250"
+            "image": "images/global-beauty-trends.webp"
         }
     ],
     "practical-guides": [
@@ -37,14 +37,14 @@
             "description": "专业解读敏感肌肤的修复与呵护秘诀",
             "path": "/posts/practical-guides/sensitive-skin-care.md",
             "category": "practical-guides", 
-            "image": "/api/placeholder/400/250"
+            "image": "images/sensitive-skin-care.webp"
         },
         {
             "title": "每日护肤routine指南", 
             "description": "科学制定适合自己的护肤程序",
             "path": "/posts/practical-guides/daily-skincare-routine.md",
             "category": "practical-guides",
-            "image": "/api/placeholder/400/250"
+            "image": "images/daily-skincare-routine.webp"
         }
     ]
 }

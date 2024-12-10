@@ -102,28 +102,28 @@
             "description": "对比不同价位段的护肤产品，分析其性价比，帮助消费者做出理智选择。",
             "path": "/posts/product-reviews/product-price-comparison.md",
             "category": "product-reviews",
-            "image": "/api/placeholder/400/250"
+            "image": "images/product-price-comparison.webp"
         },
         {
             "title": "同类产品功效对比测评",
             "description": "对比同类护肤产品的功效，帮助你了解不同品牌的产品在同一类别中的表现。",
             "path": "/posts/product-reviews/similar-products-performance-comparison.md",
             "category": "product-reviews",
-            "image": "/api/placeholder/400/250"
+            "image": "images/similar-products-performance-comparison.webp"
         },
         {
             "title": "适合不同肤质的产品推荐",
             "description": "根据不同肤质（油性、干性、敏感性等）推荐适合的护肤产品，帮助选择最适合自己的产品。",
             "path": "/posts/product-reviews/skincare-products-for-different-skin-types.md",
             "category": "product-reviews",
-            "image": "/api/placeholder/400/250"
+            "image": "images/skincare-products-for-different-skin-types.webp"
         },
         {
             "title": "新品开箱和使用体验分享",
             "description": "分享最新护肤产品的开箱和使用体验，带你深入了解新品的效果和使用感受。",
             "path": "/posts/product-reviews/product-unboxing-and-review.md",
             "category": "product-reviews",
-            "image": "/api/placeholder/400/250"
+            "image": "images/product-unboxing-and-review.webp"
         }
     ],
     "interactive-contents": [

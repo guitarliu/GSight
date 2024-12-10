@@ -91,6 +91,13 @@
     ],
     "product-reviews": [
         {
+            "title": "国内外护肤品牌排名TOP 100详细信息表",
+            "description": "深入解析全球护肤品牌排名TOP 100，了解各品牌的核心理念与明星产品。",
+            "path": "/posts/product-reviews/top-100-skincare-brands.md",
+            "category": "product-reviews",
+            "image": "/images/top-100-skincare-brands.webp"
+        },        
+        {
             "title": "不同价位段产品横向对比",
             "description": "对比不同价位段的护肤产品，分析其性价比，帮助消费者做出理智选择。",
             "path": "/posts/product-reviews/product-price-comparison.md",

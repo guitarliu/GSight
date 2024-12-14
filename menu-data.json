@@ -132,7 +132,7 @@
             "description": "解答读者在护肤过程中遇到的各种困惑，提供专业的护肤建议。",
             "path": "/posts/interactive-contents/skincare-questions-and-answers.md",
             "category": "interactive-content",
-            "image": "/api/placeholder/400/250"
+            "image": "images/skincare-questions-and-answers.webp"
         },
         {
             "title": "真实使用案例分享",

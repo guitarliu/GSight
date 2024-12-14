@@ -139,21 +139,21 @@
             "description": "分享真实用户的护肤故事和使用经验，让你了解不同产品和护肤方法的实际效果。",
             "path": "/posts/interactive-contents/real-skincare-experience-sharing.md",
             "category": "interactive-content",
-            "image": "/api/placeholder/400/250"
+            "image": "images/real-skincare-experience-sharing.webp"
         },
         {
             "title": "护肤误区纠正",
             "description": "纠正常见的护肤误区，帮助大家避免护肤过程中的常见错误，提高护肤效果。",
             "path": "/posts/interactive-contents/skincare-myths-correction.md",
             "category": "interactive-content",
-            "image": "/api/placeholder/400/250"
+            "image": "images/skincare-myths-correction.webp"
         },
         {
             "title": "美容小调查和互动话题",
             "description": "通过调查和互动话题与读者交流，了解大家的护肤偏好和热门话题。",
             "path": "/posts/interactive-contents/beauty-surveys-and-interactive-topics.md",
             "category": "interactive-content",
-            "image": "/api/placeholder/400/250"
+            "image": "images/beauty-surveys-and-interactive-topics.webp"
         }
     ]
 }

@@ -1,10 +1,10 @@
-# GSight | 智慧护肤生活指南
+# GlowInsight | 智慧护肤生活指南
 
 ## 项目简介 (Project Overview)
 
-GSight 是一个专业的护肤知识平台，致力于为用户提供科学、实用的护肤指南和美容资讯。
+GlowInsight 是一个专业的护肤知识平台，致力于为用户提供科学、实用的护肤指南和美容资讯。
 
-GSight is a professional skincare knowledge platform dedicated to providing scientific and practical skincare guides and beauty information.
+GlowInsight is a professional skincare knowledge platform dedicated to providing scientific and practical skincare guides and beauty information.
 
 ## 主要特点 (Key Features)
 
@@ -29,13 +29,13 @@ GSight is a professional skincare knowledge platform dedicated to providing scie
 
 ## 网站截图 (Website Screenshots)
 
-![Homepage Screenshot](screenshot.png)
+![Homepage Screenshot](https://pub-eb4d193b9a814125a65c71bdc18ad5d0.r2.dev/glowinsight.webp)
 
 ## 快速开始 (Quick Start)
 
 1. 克隆仓库 (Clone the repository)
    ```bash
-   git clone https://github.com/yourusername/GSight.git
+   git clone https://github.com/yourusername/GlowInsight.git
    ```
 
 2. 直接打开 `index.html` 文件即可查看网站
@@ -64,11 +64,11 @@ Welcome to submit issues and pull requests!
 
 ## 联系我们 (Contact)
 
-- 网站: [GSight.com](https://www.GSight.com)
-- 邮箱: contact@GSight.com
+- 网站: [GlowInsight.com](https://www.GlowInsight.com)
+- 邮箱: contact@GlowInsight.com
 
 ## 关于 (About)
 
-GSight 致力于分享专业、科学的护肤知识，帮助用户发现属于自己的完美肌肤密码。
+GlowInsight 致力于分享专业、科学的护肤知识，帮助用户发现属于自己的完美肌肤密码。
 
-GSight is committed to sharing professional and scientific skincare knowledge, helping users discover their perfect skin care code.
+GlowInsight is committed to sharing professional and scientific skincare knowledge, helping users discover their perfect skin care code.
